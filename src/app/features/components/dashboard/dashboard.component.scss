@@ -1,0 +1,40 @@
+.container-dashboard {
+  .top {
+    .container-spendings {
+      .chip {
+        background-color: #111111;
+        width: 200px;
+        border-radius: 10px;
+        margin-right: 20px;
+
+        .top-chart {
+          color: green;
+          height: 40px !important;
+          width: 40px !important;
+          font-size: 40px;
+        }
+
+        .bottom-chart {
+          color: red;
+          height: 40px !important;
+          width: 40px !important;
+          font-size: 40px;
+        }
+
+        .information {
+          color: #ffff;
+          span {
+            font-size: 18px;
+          }
+          p {
+            font-size: 22px;
+          }
+        }
+
+        mat-icon {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

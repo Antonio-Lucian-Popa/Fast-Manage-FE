@@ -4,8 +4,8 @@ mat-toolbar {
 }
 
 mat-sidenav {
- // margin: 16px;
-  width: 200px;
+  // margin: 16px;
+  width: 225px;
   border-right: none;
   background: #FFFFFF;
   color: white;
@@ -14,11 +14,20 @@ mat-sidenav {
   text-align: center;
 }
 
+.top-divider {
+  margin-bottom: 50%;
+}
+
+.bottom-divider {
+  margin-top: 50%;
+}
+
 .content {
   height: calc(100vh);
   border-radius: 10px 0px 0px 10px;
- // margin: 16px;
- // margin-left: 32px;
+  // margin: 16px;
+  // margin-left: 32px;
+  padding: 0 50px;
 
   display: flex;
   justify-content: center;
@@ -27,7 +36,7 @@ mat-sidenav {
 
   font-size: 2rem;
   color: lightgray;
-  background-color: #000000!important;
+  background-color: #000000 !important;
 }
 
 mat-sidenav-container {
@@ -41,22 +50,19 @@ mat-sidenav-container {
   justify-content: flex-start;
   font-size: 1rem;
 
+  text-decoration: none;
+  margin-bottom: 10px;
+
   mat-icon {
-      margin-right: 8px;
+    margin-right: 8px;
   }
 }
 
-.btn-mobile {
-  position: absolute;
-  bottom: 92%;
-  left: 2%;
-}
 
 .avatar {
   margin-top: 16px;
-  width: 100px;
   height: 100px;
-  border-radius: 50%;
+  box-shadow: none;
 }
 
 .name {
@@ -74,4 +80,59 @@ mat-divider {
   margin-top: 16px;
   margin-bottom: 16px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.active {
+  color: #ffff !important;
+  background-color: #000000;
+}
+
+
+.container-top {
+  width: 100%;
+  position: absolute;
+  bottom: 90%;
+  padding: 0 50px;
+
+  // left: 2%;
+  .container-message {
+    color: #FFFFFF;
+    span {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .container-user-actions {
+    .container-notification {
+      position: relative;
+      .red {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        bottom: 62%;
+        left: 60%;
+      }
+    }
+    .profile {
+      margin-left: 20px;
+    }
+
+    mat-icon {
+      height: 30px!important;
+      width: 30px!important;
+      font-size: 30px;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.no-margin {
+  margin: 0!important;
 }

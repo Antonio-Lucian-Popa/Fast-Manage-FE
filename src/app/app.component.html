@@ -1,46 +1,80 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <img
-      class="avatar mat-elevation-z8"
-      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
-    />
+    <img class="avatar mat-elevation-z8" src="assets/img/logo.png" />
 
-    <h4 class="name">John Smith</h4>
-    <p class="designation">Software Engineer</p>
+    <mat-divider class="top-divider"></mat-divider>
 
-    <mat-divider></mat-divider>
+    <a mat-button class="menu-button" routerLink="/dashboard" routerLinkActive="active">
+      <mat-icon class="material-symbols-outlined">
+        dashboard
+      </mat-icon>
+      <span>Dashboard</span>
+    </a>
+    <a mat-button class="menu-button" routerLink="/shipment" routerLinkActive="active">
+      <mat-icon class="material-symbols-outlined">
+        trolley
+      </mat-icon>
+      <span>Shipment</span>
+    </a>
+    <a mat-button class="menu-button" routerLink="/employees" routerLinkActive="active">
+      <mat-icon class="material-symbols-outlined">
+        badge
+      </mat-icon>
+      <span>Employees</span>
+    </a>
 
-    <button mat-button class="menu-button" routerLink="/home">
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/profile">
-      <mat-icon>person</mat-icon>
-      <span>Profile</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span>About</span>
-    </button>
+    <a mat-button class="menu-button" routerLink="/vehicles" routerLinkActive="active">
+      <mat-icon class="material-symbols-outlined">
+        local_shipping
+      </mat-icon>
+      <span>Vehicles</span>
+    </a>
 
-    <mat-divider></mat-divider>
+    <a mat-button class="menu-button" routerLink="/invoices" routerLinkActive="active">
+      <mat-icon class="material-symbols-outlined">
+        inventory
+      </mat-icon>
+      <span>Invoices</span>
+    </a>
 
-    <button mat-button class="menu-button" routerLink="/help">
-      <mat-icon>help</mat-icon>
-      <span>Help</span>
+    <mat-divider class="bottom-divider"></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/help" routerLinkActive="active">
+      <mat-icon class="material-symbols-outlined">
+        settings
+      </mat-icon>
+      <span>Settings</span>
     </button>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8">
-      <button
-      mat-icon-button
-      *ngIf="sidenav.mode === 'over'"
-      (click)="sidenav.toggle()"
-      class="btn-mobile"
-    >
-      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-    </button>
+    <div class="content d-flex flex-column justify-content-between mat-elevation-z8">
+      <div class="container-top d-flex flex-column w-100">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()" class="btn-mobile">
+              <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+              <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+            </button>
+            <div class="container-message">
+              <span>Welcome, Antonio</span>
+              <p>CEO, Transport Manager</p>
+            </div>
+          </div>
+
+          <div class="container-user-actions d-flex align-items-center">
+            <div class="container-notification d-flex align-items-center">
+              <mat-icon class="material-symbols-outlined">
+                notifications
+              </mat-icon>
+              <div class="red"></div>
+            </div>
+            <mat-icon class="material-symbols-outlined profile">
+              account_circle
+            </mat-icon>
+          </div>
+        </div>
+        <mat-divider class="no-margin"></mat-divider>
+      </div>
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
