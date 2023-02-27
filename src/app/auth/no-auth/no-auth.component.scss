@@ -1,0 +1,29 @@
+.flex-centered {
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.sub-title {
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.home-button {
+  margin-bottom: 2rem;
+}
+
+:host::ng-deep h5,
+h3,
+h1,
+p,
+div,
+button,
+h6,
+span,
+.mat-button-wrapper {
+  font-family: Popins, "Noto Sans", sans-serif !important;
+}
