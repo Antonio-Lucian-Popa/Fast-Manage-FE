@@ -1,5 +1,5 @@
 <div class="container-dashboard h-100">
-  <div class="top">
+  <div class="top d-flex align-items-start justify-content-between">
     <div class="container-spendings d-flex align-items-start flex-column">
       <div class="d-flex align-items-center w-100">
         <div class="chip d-flex align-items-center justify-content-center">
@@ -53,11 +53,21 @@
         </div>
       </div>
     </div>
-    <div class="reports">
-      <div class="container-week-report">
-        <canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="options" [type]="chartType"></canvas>
+    <div class="reports d-flex align-items-start">
+      <div class="container-week-report d-flex flex-column">
+        <span class="title-text mb-4">Weekly report</span>
+        <app-chart-bar></app-chart-bar>
       </div>
-      <div class="container-profit-report"></div>
+      <div class="container-profit-report">
+        <div class="d-flex flex-column align-items-center">
+          <span class="title-text mb-4">Profit report</span>
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="thisWeek" class="mb-5">
+            <mat-button-toggle class="first" value="thisWeek">This Week</mat-button-toggle>
+            <mat-button-toggle class="last" value="lastWeek">Last Week</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+       <app-chart-doughnut></app-chart-doughnut>
+      </div>
     </div>
   </div>
   <div class="bottom"></div>

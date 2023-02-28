@@ -16,6 +16,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    NgChartsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: GlobalHttpInterceptor, multi: true }

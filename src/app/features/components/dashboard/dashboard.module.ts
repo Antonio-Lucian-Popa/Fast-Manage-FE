@@ -6,18 +6,24 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { NgChartsModule } from 'ng2-charts';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { ChartBarComponent } from '../chart-bar/chart-bar.component';
+import { ChartDoughnutComponent } from '../chart-doughnut/chart-doughnut.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ChartBarComponent,
+    ChartDoughnutComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MatIconModule,
     MatDividerModule,
-    NgChartsModule
+    NgChartsModule,
+    MatButtonToggleModule,
   ]
 })
 export class DashboardModule { }
