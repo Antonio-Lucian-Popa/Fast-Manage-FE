@@ -17,6 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { NgChartsModule } from 'ng2-charts';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { NgChartsModule } from 'ng2-charts';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    NgChartsModule
+    NgChartsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: GlobalHttpInterceptor, multi: true }
