@@ -1,26 +1,64 @@
 <div class="container-dashboard h-100">
   <div class="top">
-    <div class="container-spendings d-flex align-items-center">
-      <div class="chip d-flex align-items-center justify-content-center">
-        <mat-icon class="material-symbols-outlined top-chart">
-          show_chart
-        </mat-icon>
-        <div class="information">
-          <span>Income</span>
-          <p>$5.000</p>
+    <div class="container-spendings d-flex align-items-start flex-column">
+      <div class="d-flex align-items-center w-100">
+        <div class="chip d-flex align-items-center justify-content-center">
+          <mat-icon class="material-symbols-outlined top-chart">
+            show_chart
+          </mat-icon>
+          <div class="information">
+            <span>Income</span>
+            <p>$5.000</p>
+          </div>
+        </div>
+        <div class="chip d-flex align-items-center justify-content-center">
+          <mat-icon class="material-symbols-outlined bottom-chart">
+            trending_down
+          </mat-icon>
+          <div class="information">
+            <span>Spendings</span>
+            <p>$2.405</p>
+          </div>
         </div>
       </div>
-      <div class="chip d-flex align-items-center justify-content-center">
-        <mat-icon class="material-symbols-outlined bottom-chart">
-          trending_down
-        </mat-icon>
-        <div class="information">
-          <span>Spendings</span>
-          <p>$2.405</p>
+      <div class="d-flex flex-column container-history w-100 mt-5">
+        <div class="history-top d-flex align-items-center justify-content-between">
+          <span class="title-text bold">Latest spendings</span>
+          <p class="link-text no-margin">View all</p>
+        </div>
+        <mat-divider class="history-divider"></mat-divider>
+        <div class="history-bottom">
+          <div class="d-flex align-items-center justify-content-between mt-3"
+            *ngFor="let spendingHistory Of spendingsHistory">
+            <div class="history-info d-flex align-items-center" [ngSwitch]="spendingHistory.type">
+              <mat-icon class="material-symbols-outlined" *ngSwitchCase="'GAS'">
+                local_gas_station
+              </mat-icon>
+              <mat-icon class="material-symbols-outlined" *ngSwitchCase="'FOOD'">
+                restaurant
+              </mat-icon>
+              <mat-icon class="material-symbols-outlined" *ngSwitchCase="'CAR_STUFF'">
+                airport_shuttle
+              </mat-icon>
+
+              <div class="d-flex flex-column container-info-history">
+                <span class="description-title">{{spendingHistory.title}}</span>
+                <p class="description no-margin">{{spendingHistory.createdAt}}</p>
+              </div>
+            </div>
+            <div class="price">
+              <p class="description no-margin">{{spendingHistory.price}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="reports"></div>
+    <div class="reports">
+      <div class="container-week-report">
+        <canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="options" [type]="chartType"></canvas>
+      </div>
+      <div class="container-profit-report"></div>
+    </div>
   </div>
   <div class="bottom"></div>
 </div>

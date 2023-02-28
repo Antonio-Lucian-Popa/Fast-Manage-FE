@@ -28,9 +28,10 @@ mat-sidenav {
   // margin: 16px;
   // margin-left: 32px;
   padding: 0 50px;
+  overflow-y: auto;
 
   display: flex;
-  justify-content: center;
+ // justify-content: center;
   align-items: center;
   position: relative;
 
@@ -131,8 +132,4 @@ mat-divider {
       color: #FFFFFF;
     }
   }
-}
-
-.no-margin {
-  margin: 0!important;
 }

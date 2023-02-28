@@ -44,4 +44,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 app-dashboard {
   min-height: calc(100% - 95px);
   width: 100%;
+  margin-top: 10%;
+}
+
+
+.title-text {
+  font-size: 20px!important;
+}
+
+.link-text {
+  font-size: 15px!important;
+}
+
+.description-title {
+  font-size: 18px!important;
+}
+
+.description {
+  font-size: 15px!important;
+}
+
+.bold {
+  font-weight: bold!important;
+}
+
+.no-margin {
+  margin: 0!important;
 }

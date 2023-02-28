@@ -1,11 +1,11 @@
 .container-dashboard {
   .top {
     .container-spendings {
+      width: 400px;
       .chip {
         background-color: #111111;
         width: 200px;
         border-radius: 10px;
-        margin-right: 20px;
 
         .top-chart {
           color: green;
@@ -35,6 +35,27 @@
           margin-right: 30px;
         }
       }
+      .chip:nth-child(1) {
+        margin-right: 20px;
+      }
     }
+  }
+}
+
+.container-info-history {
+  margin-left: 10px;
+}
+
+.history-divider {
+  background: #ffff;
+  margin: 15px 0;
+}
+
+.reports {
+  .container-week-report {
+    background-color: #111111;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
