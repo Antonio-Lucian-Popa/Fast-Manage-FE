@@ -2,6 +2,7 @@ table {
   font-size: 15px;
   background-color: #111111;
   color: white!important;
+  min-height: 200px;
 }
 
 mat-paginator {
@@ -15,3 +16,11 @@ th, td {
   border-color: #404040;
 }
 
+.container-spinner {
+  background-color: #111111;
+  min-height: 200px;
+}
+
+.detail-icon {
+  cursor: pointer;
+}

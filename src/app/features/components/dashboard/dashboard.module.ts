@@ -12,6 +12,8 @@ import { ChartBarComponent } from '../chart-bar/chart-bar.component';
 import { ChartDoughnutComponent } from '../chart-doughnut/chart-doughnut.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     NgChartsModule,
     MatButtonToggleModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ]
 })
 export class DashboardModule { }

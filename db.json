@@ -1,0 +1,170 @@
+{
+  "profit": [
+    {
+      "id": 1,
+      "value": 30,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 2,
+      "value": 10,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 3,
+      "value": 50,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 4,
+      "value": 76,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 5,
+      "value": 32,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 6,
+      "value": 11,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 7,
+      "value": 98,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 8,
+      "value": 23,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 9,
+      "value": 45,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 10,
+      "value": 87,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 11,
+      "value": 73,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 12,
+      "value": 90,
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    }
+  ],
+  "expense": [
+    {
+      "id": 1,
+      "value": 150,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 2,
+      "value": 10,
+      "type": "FOOD",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 3,
+      "value": 50,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 4,
+      "value": 76,
+      "type": "CAR_STUFF",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 5,
+      "value": 32,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 6,
+      "value": 11,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 7,
+      "value": 98,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 8,
+      "value": 23,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 9,
+      "value": 45,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 10,
+      "value": 87,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 11,
+      "value": 73,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    },
+    {
+      "id": 12,
+      "value": 90,
+      "type": "GAS",
+      "createdAt": "May 10, 2023 at 09:14 PM"
+    }
+  ],
+  "merchandise": [
+    {
+      "id": 1,
+      "sender": "Step Tap",
+      "consignee": "Geoghe Andrei",
+      "loading_location": "Cluj, Romania",
+      "download_location": "Bucuresti, Romania",
+      "price": "500 Ron",
+      "kg": "500",
+      "status": "Incarcat"
+    },
+    {
+      "id": 2,
+      "sender": "Step Tap",
+      "consignee": "Geoghe Andrei",
+      "loading_location": "Cluj, Romania",
+      "download_location": "Bucuresti, Romania",
+      "price": "500 Ron",
+      "kg": "500",
+      "status": "Incarcat"
+    },
+    {
+      "id": 3,
+      "sender": "Step Tap",
+      "consignee": "Geoghe Andrei",
+      "loading_location": "Cluj, Romania",
+      "download_location": "Bucuresti, Romania",
+      "price": "500 Ron",
+      "kg": "500",
+      "status": "De Incarcat"
+    }
+  ]
+}

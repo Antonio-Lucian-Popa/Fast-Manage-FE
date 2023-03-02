@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild, OnInit } from '@angular/core';
 import { ChartDataset, ChartOptions, ChartType } from 'chart.js';
 
 import { BaseChartDirective } from 'ng2-charts';
@@ -9,10 +9,12 @@ import 'chart.piecelabel.js';
   templateUrl: './chart-doughnut.component.html',
   styleUrls: ['./chart-doughnut.component.scss']
 })
-export class ChartDoughnutComponent {
+export class ChartDoughnutComponent implements OnInit {
 
   @ViewChild(BaseChartDirective)
   baseChart!: BaseChartDirective;
+
+  @Input() data: any[] = [];
 
   public chartLabels: string[] = ["Expenses", "Profit"];
 
@@ -52,4 +54,17 @@ export class ChartDoughnutComponent {
       }
     }
   };
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.chartData[0].data = this.data;
+  }
+
+  ngOnChanges(changes: any) {
+    this.chartData[0].data = changes.data.currentValue;
+    if(this.baseChart) {
+      this.baseChart.update();
+    }
+  }
 }

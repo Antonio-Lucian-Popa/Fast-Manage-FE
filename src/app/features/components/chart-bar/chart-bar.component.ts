@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ChartDataset, ChartOptions, ChartType } from 'chart.js';
 
 import { BaseChartDirective } from 'ng2-charts';
@@ -8,17 +8,19 @@ import { BaseChartDirective } from 'ng2-charts';
   templateUrl: './chart-bar.component.html',
   styleUrls: ['./chart-bar.component.scss']
 })
-export class ChartBarComponent {
+export class ChartBarComponent implements OnInit {
 
   @ViewChild(BaseChartDirective)
   baseChart!: BaseChartDirective;
+
+  @Input() data: number[] = [];
 
   public chartLabels: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   public chartData: ChartDataset[] = [
     {
       fill: false,
-      data: [30, 10, 50, 76, 32, 11, 98, 23, 45, 87, 73, 90],
+      data: [],
       backgroundColor: ["#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4", "#1F78B4"]
     }
   ];
@@ -46,4 +48,16 @@ export class ChartBarComponent {
       }
     }
   };
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: any) {
+    this.chartData[0].data = changes.data.currentValue;
+    if(this.baseChart) {
+      this.baseChart.update();
+    }
+  }
 }
